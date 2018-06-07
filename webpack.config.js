@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const bundlePath = path.resolve(__dirname, "dist/");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["babel-polyfill", "./src/index.js"],
   module: {
     rules: [
       {
@@ -18,7 +18,10 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+  resolve: {
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    extensions: ['*', '.js', '.jsx']
+  },
   output: {
     publicPath: bundlePath,
     filename: "bundle.js"

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "components/Link";
 
 class Nav extends Component {
   render() {
@@ -6,7 +7,9 @@ class Nav extends Component {
       <nav>
         <a href="#">Logo</a>
         <ul>
-          <li>Post a job</li>
+          <li>
+            <Link href="/post">Post a job</Link>
+          </li>
           <li>Subcribe to Newsletter</li>
           <li>Twitter</li>
         </ul>

@@ -4,8 +4,12 @@ class Nav extends Component {
   render() {
     return (
       <nav>
-        Some Nav
-        { this.props.children }
+        <a href="#">Logo</a>
+        <ul>
+          <li>Post a job</li>
+          <li>Subcribe to Newsletter</li>
+          <li>Twitter</li>
+        </ul>
       </nav>
     )
   }

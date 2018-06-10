@@ -9,27 +9,28 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        options: { presets: ['env'] }
+        loader: "babel-loader",
+        options: { presets: ["env"] }
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    extensions: ['*', '.js', '.jsx']
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    extensions: ["*", ".js", ".jsx"]
   },
   output: {
     publicPath: bundlePath,
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname,'public'),
+    contentBase: path.join(__dirname, "public"),
     port: 3000,
-    publicPath: "http://localhost:3000/dist"
+    publicPath: "http://localhost:3000/dist",
+    historyApiFallback: true
   },
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };

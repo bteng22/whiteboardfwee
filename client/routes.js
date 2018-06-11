@@ -1,8 +1,8 @@
 import React from "react";
-import App from "./App";
+import HomePage from "components/HomePage";
 import JobPage from "components/JobPage";
 
 export default [
-  { path: "/", action: () => <App /> },
+  { path: "/", action: () => <HomePage /> },
   { path: "/job", action: () => <JobPage /> }
 ];

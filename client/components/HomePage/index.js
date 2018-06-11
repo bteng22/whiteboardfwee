@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import Nav from 'components/Nav';
+import Footer from 'components/Footer';
 import JobIndex from "components/JobIndex";
 
-class Home extends Component {
+class HomePage extends Component {
   render() {
-    return (
-      <div>
+    return [
+      <Nav key="nav"/>,
+      <div key="home">
         <div className="jumbotron">
           <h1>Find your next developer job</h1>
           <h2>No whiteboards. No games. No riddles.</h2>
@@ -21,9 +24,10 @@ class Home extends Component {
           </form>
         </div>
         <JobIndex />
-      </div>
-    );
+      </div>,
+      <Footer key="footer"/>
+    ];
   }
 }
 
-export default Home;
+export default HomePage;

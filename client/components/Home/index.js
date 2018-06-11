@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import JobIndex from "components/JobIndex";
 
 class Home extends Component {
   render() {
@@ -11,31 +12,18 @@ class Home extends Component {
         </div>
         <div>
           <form>
-            <input type="text" placeholder="Get the weekly email"/>
-            <input type="submit"/>
+            <input type="text" placeholder="Get the weekly email" />
+            <input type="submit" />
           </form>
           <form>
-            <input type="text" placeholder="Search title or location"/>
-            <input type="submit"/>
+            <input type="text" placeholder="Search title or location" />
+            <input type="submit" />
           </form>
         </div>
-        <div>
-          <ul>
-            <li>Job 1</li>
-            <li>Job 2</li>
-            <li>Job 3</li>
-          </ul>
-          <ul>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-            <li><a href="#">Next ›</a></li>
-            <li><a href="#">Last ››</a></li>
-          </ul>
-        </div>
+        <JobIndex />
       </div>
-    )
+    );
   }
-};
+}
 
 export default Home;

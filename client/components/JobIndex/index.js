@@ -18,11 +18,12 @@ class JobIndex extends Component {
     }
   }
 
-  renderJob(props) {
-    const { id, title, company, city, state, description } = props;
+  renderJob(job) {
+    console.log('+++job', job);
+    const { _id, title, company, city, state, description } = job;
 
     return (
-      <li key={id}>
+      <li key={_id}>
         <a href="#">{title}</a>
         <span>
           {company} - {city}, {state}

@@ -10,6 +10,7 @@ const renderComponent = (component) => {
 };
 
 const render = (location) => {
+  console.log('+++location', location);
   router.resolve(routes, location)
     .then(renderComponent)
     .catch(error => router.resolve(routes, { ...location, error })

@@ -15,7 +15,7 @@ class Nav extends Component {
   render() {
     return (
       <StyledNav isCollapsed={this.state.isCollapsed}>
-        <a href="#">Logo</a>
+        <Link href="/">Logo</Link>
         <Hamburger onClick={this.toggleNav.bind(this)}>
           <img src="menu.svg" />
         </Hamburger>

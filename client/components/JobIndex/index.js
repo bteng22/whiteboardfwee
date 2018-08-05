@@ -19,7 +19,6 @@ class JobIndex extends Component {
   }
 
   renderJob(job) {
-    console.log('+++job', job);
     const { _id, title, company, city, state, description } = job;
 
     return (

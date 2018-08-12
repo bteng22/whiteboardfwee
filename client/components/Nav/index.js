@@ -23,8 +23,10 @@ class Nav extends Component {
           <li>
             <Link href="/job">Post a job</Link>
           </li>
-          <li>Subcribe to Newsletter</li>
-          <li>Twitter</li>
+          <li>
+            <Link href="/signup/referer">Referer</Link>
+          </li>
+          <li>Referee</li>
         </StyledNavList>
       </StyledNav>
     );

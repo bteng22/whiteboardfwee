@@ -14,7 +14,6 @@ function matchURI(path, uri) {
 }
 
 async function resolve(routes, context) {
-  console.log('+++', routes, context);
   for (const route of routes) {
     const uri = context.error ? '/error' : context.pathname;
     const params = matchURI(route.path, uri);
